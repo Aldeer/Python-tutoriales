@@ -9,7 +9,12 @@ from pathlib import Path
 
 # Renombrar con path
 
-path_actual = Path("Data")
+""" path_actual = Path("Data")
 path_objetivo = Path("Dataset")
 
-Path.rename(path_actual, path_objetivo)
+Path.rename(path_actual, path_objetivo) """
+
+
+for file in os.listdir():
+    if file.endswith(".csv"):
+        os.rename(file, f"2022-{file}")
